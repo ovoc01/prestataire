@@ -9,6 +9,9 @@
   <title>List prestataire</title>
 </head>
 <body>
+<h1 class="display display-4">Listes des prestataire pour l'<%=rn.name %></h1>
+
+<h6 class="display ">Formules :<%=formula %></h6>
 <table class="table">
   <thead>
   <tr>
@@ -18,6 +21,7 @@
     <th scope="col">prix</th>
     <th scope="col">employe</th>
     <th scope="col">penalite</th>
+    <th scope="col">Ancienneté</th>
     <th scope="col">rentabilité</th>
   </tr>
   </thead>
@@ -30,7 +34,8 @@
       <td><%=prest.prix %>euro</td>
       <td><%=prest.employe %></td>
       <td>-<%=prest.penalite %></td>
-      <td>-<%=prest.rentability %></td>
+      <td><%=prest.age %>ans</td>
+      <td><%=prest.rentability %></td>
   </tr>
     <%end %>
   </tbody>

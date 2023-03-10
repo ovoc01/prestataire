@@ -55,7 +55,7 @@ class Entreprise
       temp_entreprise.set_prix(row['prix'])
       temp_entreprise.set_penalite(row['penalite'])
       temp_entreprise.set_vitesse(row['vitesse'])
-      temp_entreprise.set_age(row['age'])
+      temp_entreprise.set_age(row['anciennete'])
       result[i] = temp_entreprise
       i+=1
     end
@@ -76,6 +76,7 @@ class Entreprise
       temp_entreprise.set_penalite(row['penalite'])
       temp_entreprise.set_vitesse(row['vitesse'])
       temp_entreprise.set_date_creation(row['dateCreation'])
+      temp_entreprise.set_age(row['anciennete'])
       temp_entreprise.set_rentability(row['rentability'])
       result[i] = temp_entreprise
       i+=1
