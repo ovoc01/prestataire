@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 require_relative 'utils'
 class Entreprise
-  attr_accessor  :id, :nom, :prix, :vitesse, :employe, :penalite, :age,:dateCreation
+  attr_accessor  :id, :nom, :prix, :vitesse, :employe, :penalite, :age,:dateCreation,:rentability
 
   def initialize
 
   end
 
+  def set_rentability(rentability)
+    self.rentability = rentability
+  end
   def set_age(age)
     self.age = age
   end
@@ -73,6 +76,7 @@ class Entreprise
       temp_entreprise.set_penalite(row['penalite'])
       temp_entreprise.set_vitesse(row['vitesse'])
       temp_entreprise.set_date_creation(row['dateCreation'])
+      temp_entreprise.set_rentability(row['rentability'])
       result[i] = temp_entreprise
       i+=1
     end

@@ -21,7 +21,7 @@ class Utils
     road  = getSpecific_road(id,con)
     formula = road.formula(con)
     f = transform(formula[0],con)
-    query = sprintf("select id,nom,prix,vitesse,employe,penalite,anciennete from info_prestataire order by (%s)/prix desc",f)
+    query = sprintf("select id,nom,prix,vitesse,employe,penalite,anciennete,%s as rentability from info_prestataire order by (%s)/prix desc",f,f)
     return Entreprise.list_prestataire(query,con)
   end
 
