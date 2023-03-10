@@ -1,0 +1,1 @@
+insert into formule values(1,"4*employe+2*vitesse-2*penalite")
